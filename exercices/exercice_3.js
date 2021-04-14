@@ -5,7 +5,7 @@ if (!k) {
   throw new Error('Please provide a valid number.')
 }
 
-const exercice1 = (arr, resultK) => {
+const exercice3 = (arr, resultK) => {
   for (let i = 1; i < arr.length; i++){
 		if (arr[0] + arr[i] === resultK){
       return console.log(true);
@@ -14,4 +14,4 @@ const exercice1 = (arr, resultK) => {
 	return console.log(false);
 }
 
-exercice1(data, k);
+exercice3(data, k);

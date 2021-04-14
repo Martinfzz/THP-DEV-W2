@@ -1,6 +1,6 @@
 const data = require('../parseData');
 
-const exercice2 = (arr) => {
+const exercice4 = (arr) => {
   let count = 0;
   let max = 0;
   arr.reverse().map((element) => {
@@ -11,4 +11,5 @@ const exercice2 = (arr) => {
   })  
 	console.log(count);
 }
-exercice2(data);
+
+exercice4(data);

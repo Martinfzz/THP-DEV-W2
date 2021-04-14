@@ -19,4 +19,5 @@ const exercice2 = (arr) => {
   count = newArr.length;
 	console.log(count);
 }
+
 exercice2(data);
