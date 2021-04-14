@@ -18,6 +18,7 @@ const heapify = (arr, len) => {
   let mid = Math.floor((len-2)/2);
   while(mid >= 0){
     siftDown(arr, mid--, len-1);
+    heapComparisons++;
   }
 }
 
@@ -28,19 +29,23 @@ const siftDown = (arr, start, end) => {
   while(child <= end){
     if(arr[toSwap] < arr[child]){
       swap(arr, toSwap, child);
+      heapComparisons++;
     }
     if(child+1 <= end && arr[toSwap] < arr[child+1]){
       swap(arr, toSwap, child+1);
+      heapComparisons++;
     }
     if(toSwap != root){
       swap(arr, root, toSwap);
       root = toSwap;
+      heapComparisons++;
     }
     else{
       return; 
     }
     toSwap = root;
     child = root*2+1;
+    heapComparisons++;
   }
 }
 

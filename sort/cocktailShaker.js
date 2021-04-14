@@ -10,9 +10,8 @@ const cocktailShakerSort = (arr) => {
         arr[i] = arr[i + 1];
         arr[i+1] = temp;
         isSorted = true;
-        
+        cocktailShakerComparisons ++;
       }
-    cocktailShakerComparisons ++;
     }
  
     if (!isSorted) {
@@ -27,11 +26,9 @@ const cocktailShakerSort = (arr) => {
         arr[j] = arr[j - 1];
         arr[j - 1] = temp;
         isSorted = true;
-        
+        cocktailShakerComparisons ++;
       }
-    cocktailShakerComparisons ++;
     }
-    cocktailShakerComparisons ++;
   } 
   console.log(`Tri cocktail: ${cocktailShakerComparisons} comparaisons - [${arr}]`);
 }
