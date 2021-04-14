@@ -1,9 +1,5 @@
 const fs = require('fs');
 
-const bubbleSort = require('./sort/bubble');
-const insertSort = require('./sort/insert');
-const selectSort = require('./sort/selection');
-const quickSort = require('./sort/quicksort');
 const cocktailShakerSort = require('./sort/cocktailShaker');
 const mergeSort = require('./sort/fusion');
 const heapSort = require('./sort/heapsort');
@@ -21,10 +17,6 @@ try {
     .filter((num) => num.length > 0 && !isNaN(num))
     .map((num) => Number.parseInt(num));
 
-  bubbleSort([...numbers]);
-  insertSort([...numbers]);
-  selectSort([...numbers]);
-  quickSort([...numbers]);
   cocktailShakerSort([...numbers]);
   mergeSort([...numbers]);
   heapSort([...numbers]);
