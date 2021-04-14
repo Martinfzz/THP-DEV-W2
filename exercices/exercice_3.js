@@ -1,22 +1,17 @@
-const data = require('./parseData');
+const data = require('../parseData');
 const k = Number(process.argv[3]);
-let comparisons = 0;
 
 if (!k) {
   throw new Error('Please provide a valid number.')
 }
 
-const exercice3 = (numbers, resultK) => {
-  return numbers.some((value1, index1) => {
-      return numbers.some((value2, index2) => {
-          if (index2 === index1) {
-              return false;
-          }
-          comparisons += 1;
-          return ((value1 + value2) === resultK);
-      });
-  });
+const exercice1 = (arr, resultK) => {
+  for (let i = 1; i < arr.length; i++){
+		if (arr[0] + arr[i] === resultK){
+      return console.log(true);
+		}
+	}
+	return console.log(false);
 }
 
-const result = exercice3(data, k);
-console.log(result);
+exercice1(data, k);

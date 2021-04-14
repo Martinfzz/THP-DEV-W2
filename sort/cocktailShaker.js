@@ -33,7 +33,7 @@ const cocktailShakerSort = (arr) => {
     }
     cocktailShakerComparisons ++;
   } 
-  console.log(`Tri par tas: ${cocktailShakerComparisons} comparaisons - [${arr}]`);
+  console.log(`Tri cocktail: ${cocktailShakerComparisons} comparaisons - [${arr}]`);
 }
 
 module.exports = cocktailShakerSort;
