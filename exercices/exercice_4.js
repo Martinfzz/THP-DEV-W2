@@ -1,14 +1,15 @@
 const data = require('../parseData');
 
 const exercice4 = (arr) => {
-  let count = 0;
-  let max = 0;
-  arr.reverse().map((element) => {
-    if (element > max){
+  let count = 1;
+  let n = arr.length;
+  let max = arr[n-1];
+  for (let i = n-1; i >= 1; i--){
+    if (arr[i] > max){
+      max = arr[i];
       count ++;
-      max = element;
     }
-  })  
+  }
 	console.log(count);
 }
 
